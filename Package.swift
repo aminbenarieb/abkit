@@ -4,14 +4,17 @@ import PackageDescription
 
 let package = Package(
     name: "abkit",
+    platforms: [
+        .iOS(.v16)
+    ],
     products: [
         .library(
             name: "ABKit",
             targets: ["ABCore"]
         ),
         .library(
-            name: "ABCV",
-            targets: ["ABCV"]
+            name: "ABVision",
+            targets: ["ABVision"]
         ),
         .library(
             name: "ABUtils",
@@ -24,7 +27,7 @@ let package = Package(
             dependencies: []
         ),
         .target(
-            name: "ABCV",
+            name: "ABVision",
             dependencies: []
         ),
         .target(
